@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Hanken";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype"); /* Path to the font file */
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: "Hanken";
+  }
+  .container {
+    width: 425px;
+    height: 700px;
+  }
+  .firstContainer {
+    background: rgb(49, 44, 234);
+    background: linear-gradient(
+      356deg,
+      rgba(49, 44, 234, 1) 0%,
+      rgba(80, 58, 245, 1) 50%,
+      rgba(102, 66, 254, 1) 100%
+    );
+    width: 100%;
+    height: 400px;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px 40px 100px;
+    color: white;
+  }
+  .secondContainer {
+    background-color: white;
+    width: 100%;
+    height: 350px;
+    border-radius: 25px;
+  }
+
+  .resultContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px 40px 10px;
+    margin-inline: 20px;
+  }
+
+  .remark {
+    text-align: center;
+  }
+
+  .remark h2 {
+    margin-bottom: 10px;
+  }
+
+  .remark p {
+    font-size: small;
+    color: rgb(199, 199, 199);
+  }
+
+  .resultScore div {
+    padding: 20px 15px 20px 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .resultScore p {
+    font-size: small;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+  }
+
+  .resultScore p img {
+    margin-right: 8px;
+    width: 17px;
+  }
+
+  .resultScore p span {
+    color: gray;
+    position: absolute;
+    right: 20px;
+  }
+
+  .resultScore p span b {
+    color: rgb(57, 57, 57);
+  }
+
+  .reaction {
+    background-color: #fff6f5;
+    color: #d35055;
+  }
+
+  .memory {
+    display: flex;
+    background-color: #fffbf2;
+    color: #ffc64a;
+  }
+
+  .verbal {
+    display: flex;
+    background-color: #f2fbfa;
+    color: #1aa482;
+  }
+
+  .visual {
+    display: flex;
+    background-color: #f3f3fd;
+    color: #1e28ae;
+  }
+
+  .btn {
+    margin-top: 20px;
+    font-family: "Hanken";
+    background-color: #303b59;
+    border: none;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    border-radius: 20px;
+  }
+
+  .result h4 {
+    color: rgb(199, 199, 199);
+  }
+  .heading h4 {
+    color: #303b59;
+    font-size: larger;
+  }
+
+  .scoreCircle {
+    background: rgb(71, 52, 240);
+    background: linear-gradient(356deg, #503af5 0%, #4d22c9 100%);
+    padding: 30px 45px;
+    border-radius: 75px;
+    text-align: center;
+  }
+
+  .scoreCircle h1 {
+    font-size: 50px;
+  }
+  .scoreCircle p {
+    font-size: small;
+    color: rgb(199, 199, 199);
+  }
+}
+
+@media (min-width: 480px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Hanken";
+  }
+  .container {
+    width: 480px;
+    height: 350px;
+    position: relative;
+    box-shadow: rgba(0, 72, 255, 0.338) 0px 18px 50px -10px;
+    border-radius: 25px;
+  }
+  .firstContainer {
+    background: rgb(49, 44, 234);
+    background: linear-gradient(
+      356deg,
+      rgba(49, 44, 234, 1) 0%,
+      rgba(80, 58, 245, 1) 50%,
+      rgba(102, 66, 254, 1) 100%
+    );
+    width: 240px;
+    height: 350px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px 40px 25px;
+    color: white;
+  }
+  .secondContainer {
+    background-color: white;
+    width: 280px;
+    height: 350px;
+    position: absolute;
+    right: 0;
+    border-radius: 25px;
+  }
+
+  .resultContent {
+    position: absolute;
+    left: 60px;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px 40px 10px;
+    margin-right: 20px;
+  }
+
+  .remark {
+    text-align: center;
+  }
+
+  .remark h2 {
+    margin-bottom: 10px;
+  }
+
+  .remark p {
+    font-size: small;
+    color: rgb(199, 199, 199);
+  }
+
+  .resultScore div {
+    padding: 10px 15px 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .resultScore p {
+    font-size: small;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+  }
+
+  .resultScore p img {
+    margin-right: 8px;
+    width: 17px;
+  }
+
+  .resultScore p span {
+    color: gray;
+    position: absolute;
+    right: 10px;
+  }
+
+  .resultScore p span b {
+    color: rgb(57, 57, 57);
+  }
+
+  .reaction {
+    background-color: #fff6f5;
+    color: #d35055;
+  }
+
+  .memory {
+    display: flex;
+    background-color: #fffbf2;
+    color: #ffc64a;
+  }
+
+  .verbal {
+    display: flex;
+    background-color: #f2fbfa;
+    color: #1aa482;
+  }
+
+  .visual {
+    display: flex;
+    background-color: #f3f3fd;
+    color: #1e28ae;
+  }
+
+  .btn {
+    font-family: "Hanken";
+    background-color: #303b59;
+    border: none;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    border-radius: 20px;
+  }
+
+  .result h4 {
+    color: rgb(199, 199, 199);
+  }
+  .heading h4 {
+    color: #303b59;
+  }
+
+  .scoreCircle {
+    background: rgb(71, 52, 240);
+    background: linear-gradient(356deg, #503af5 0%, #4d22c9 100%);
+    padding: 30px 45px;
+    border-radius: 75px;
+    text-align: center;
+  }
+
+  .scoreCircle h1 {
+    font-size: 50px;
+  }
+  .scoreCircle p {
+    font-size: small;
+    color: rgb(199, 199, 199);
+  }
+}
+
+.btn:hover {
+  background: rgb(49, 44, 234);
+  background: linear-gradient(
+    356deg,
+    rgba(49, 44, 234, 1) 0%,
+    rgba(80, 58, 245, 1) 50%,
+    rgba(102, 66, 254, 1) 100%
+  );
+  cursor: pointer;
+}
